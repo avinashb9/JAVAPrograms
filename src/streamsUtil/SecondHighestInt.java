@@ -10,7 +10,7 @@ public class SecondHighestInt {
 		// TODO Auto-generated method stub
 
 		int[] arr = {34,23,5,6,78,90,1,1,9,0,5,7};
-		List<Integer> list = Arrays.asList(34,23,5,6,78,90,1,1,9,0,5,7);
+		List<Integer> list = Arrays.stream(arr).boxed().toList();
 		
 		int secH = list.stream().sorted(Collections.reverseOrder()).distinct().skip(1).findFirst().get();
 		System.out.println(secH);
